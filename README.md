@@ -1,3 +1,8 @@
+# Project Description
+
+Smart-Brain is a full-stack javascript application that has AI functionalities, you can paste an image URL and Smart-Brain will detect faces on that image by placing a blue square around all the faces in your image.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
