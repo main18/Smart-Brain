@@ -109,11 +109,11 @@ class App extends Component {
     this.state = initialState;
   }
 
-  componentDidMount() {
-    fetch("http://localhost:3001/")
+  /* componentDidMount() {
+    fetch("https://sheltered-wildwood-06675.herokuapp.com")
       .then((res) => res.json())
       .then(console.log);
-  }
+  } */
 
   calculateFaceLocation = (data) => {
     const clarifaiFace =
@@ -139,7 +139,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    fetch("http://localhost:3001/imageurl", {
+    fetch("https://sheltered-wildwood-06675.herokuapp.com/imageurl", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -151,7 +151,7 @@ class App extends Component {
       .then((response) => response.json())
       .then((response) => {
         if (response) {
-          fetch("http://localhost:3001/image", {
+          fetch("https://sheltered-wildwood-06675.herokuapp.com/image", {
             method: "PUT",
             headers: {
               "Content-type": "application/json",

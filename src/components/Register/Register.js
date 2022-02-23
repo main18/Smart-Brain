@@ -14,13 +14,16 @@ const Register = ({ onRouteChange, loadUser }) => {
     };
 
     if (newUser.email && newUser.name && newUser.password) {
-      const res = await fetch("http://localhost:3001/register", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(newUser),
-      });
+      const res = await fetch(
+        "https://sheltered-wildwood-06675.herokuapp.com/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify(newUser),
+        }
+      );
       const user = await res.json();
       if (user.id) {
         console.log(user);
