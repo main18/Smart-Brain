@@ -109,12 +109,6 @@ class App extends Component {
     this.state = initialState;
   }
 
-  /* componentDidMount() {
-    fetch("https://sheltered-wildwood-06675.herokuapp.com")
-      .then((res) => res.json())
-      .then(console.log);
-  } */
-
   calculateFaceLocation = (data) => {
     const clarifaiFace =
       data.outputs[0].data.regions[0].region_info.bounding_box;
@@ -167,7 +161,7 @@ class App extends Component {
         }
         this.displayFaceBox(this.calculateFaceLocation(response));
       })
-      .catch((err) => console.log("something went wrong", err));
+      .catch((err) => console.log("err => ", err));
   };
 
   onRouteChange = (route) => {

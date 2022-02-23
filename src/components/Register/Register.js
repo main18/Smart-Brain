@@ -26,7 +26,6 @@ const Register = ({ onRouteChange, loadUser }) => {
       );
       const user = await res.json();
       if (user.id) {
-        console.log(user);
         loadUser(user);
         onRouteChange("home");
       }
